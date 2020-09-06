@@ -3,8 +3,6 @@ package com.kaka.group.binarysearch;
 public class IterativeSearch {
 
     public static void main(String args[]){
-        boolean flag =  findValue(new int[]{3 , 5 , 8, 10, 12, 15, 18,20,20,50,60} , 50);
-        System.out.println(flag);
     }
 
     public static boolean findValue(int a[] ,int value){

@@ -1,6 +1,6 @@
 package com.kaka.group.linkedlist;
 
-public class SimpleLinkedList {
+public class SimpleLinkedList extends MergeSortedList{
 
     Node head;
     Node last;
@@ -37,6 +37,8 @@ public class SimpleLinkedList {
     }
 
     public void travse(){
+        SimpleLinkedList s = new SimpleLinkedList();
+        //s.test();
         Node temp = head;
         if(head == null){
             return;

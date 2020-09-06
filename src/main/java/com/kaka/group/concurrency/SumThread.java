@@ -1,5 +1,7 @@
 package com.kaka.group.concurrency;
-
+/*
+simple compare between single and multiple Thread
+ */
 public class SumThread {
 
     private long start;
