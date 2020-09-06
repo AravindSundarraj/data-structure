@@ -1,5 +1,24 @@
 package com.kaka.group.sort;
 
+/*
+Steps:
+1. find the max element in array
+2.  create an array called count. add the number of occurance of each element, index will be the value of original array
+        eg int a[] = {0 , 1,1}
+        count [] = new [a.length + 1];
+        count[0] = 1 - > total count of value 0 is 1.
+        count[1] = 2 - > total count of value 1 is 2.
+3. modify the count array to index positions.
+count[0] = 1
+count[1] = 2 + 1 = 3
+
+4. travse the original array in reverse order and store the sort order in another array
+o[2] = 1;
+go to 1 positions of count array we will have 3, decrement by one 3-1 =2 , store the value in 2nd postion
+of sorted array;
+ */
+
+
 public class CountSort {
 
     public static void main(String args[]){
