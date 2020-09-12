@@ -28,7 +28,7 @@ public class QuickSortII {
         int i = lb - 1;
 
         for(int j = lb; j < ub; j++ ){
-            if(a[j] <= pivot){
+            if(a[j] <= a[pivot]){
                 i++;
                 int temp = a[i];
                 a[i] = a[j];

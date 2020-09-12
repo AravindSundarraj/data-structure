@@ -18,40 +18,23 @@ public class QuickSort {
 
     public static int partition(int a[] , int lb , int hb){
 
-        System.out.println("Upper bound ==>>" + hb);
-        System.out.println("lower bound==>>" + lb);
         int pivot = a[lb];
-        int start = lb;
-        int end = hb;
+        int i = lb - 1;
 
-        while(start < end) {
-            System.out.println("The Start =>" +start);
-            while (a[start] <= pivot) {
-                start++;
-                System.out.println("The Start =>" +start + "Pivot =>" +pivot + "Start value ==>>" );
-            }
-
-            while (a[end] > pivot) {
-                end--;
-            }
-
-            if (start < end) {
-                int temp = a[start];
-                a[start] = a[end];
-                a[end] = temp;
+        for(int j = lb; j < hb; j++){
+            if(a[j] <= pivot){
+                ++i;
+              int temp =  a[i] ;
+              a[i] = a[j];
+              a[j] = temp;
             }
         }
-        //if(start > end){
-            int temp = a[end];
-             a[end] = a[lb];
-             a[lb] = temp;
 
-      //  }
-        for(int i = 0; i < a.length; i++){
-            System.out.print(a[i] + "  ,  ");
-        }
-        System.out.println();
-        return end;
+        int temp = a[i+1];
+        a[i + 1] = pivot;
+        a[lb] = temp;
+
+        return i + 1;
 
     }
 
